@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /minimum-spanning-tree
+        
+worker1BaseURI: 
+  "http://localhost:8081/worker"
+worker2BaseURI: 
+  "http://localhost:8082/worker"
+worker3BaseURI: 
+  "http://localhost:8083/worker"
+      
+worker-ports: "8081,8082,8083"      
