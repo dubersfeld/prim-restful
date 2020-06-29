@@ -4,7 +4,7 @@ I present here a Java demo of the Minimum Spanning Tree using a parallelizable i
 Here are the prerequisites to run this demo:
 
 A recent Maven version installed (I use 3.6.0).
-A recent Docker version installed (I use 17.12.1-ce)
+A recent Docker version installed (I use 19.03.11-ce)
 
 The algorithm itself is implemented in Java, Javascript is only used for initialization and display on Canvas.
 
@@ -27,7 +27,7 @@ supervisor: 8080
 workers: 8081,8082,8083
 
 # Building Docker image
-To build the Docker image run the command `mvn clean package docker:build` in subdirectory worker. It builds a docker image named prim/worker.
+To build the Docker image run the command `mvn spring-boot:build-image` in subdirectory worker. It builds a docker image named worker:0.0.1-SNAPSHOT. This command uses the native Docker support provided by Spring Boot release 2.3.
 
 # Launching the demo
 

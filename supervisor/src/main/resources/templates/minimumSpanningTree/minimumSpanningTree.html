@@ -637,7 +637,8 @@ function canvasApp() {
   					
 					for (var i1 = 0; i1 < snapVertices.length; i1++) {
 					
-						connGraph.mV[i1] = new DisplayVertex(snapVertices[i1].name);
+						//connGraph.mV[i1] = new DisplayVertex(snapVertices[i1].name);
+						connGraph.mV[i1] = new DisplayVertex(i1);
 						
 						connGraph.mV[i1].mNx = geometry[snapVertices[i1].name][0];
   	  					connGraph.mV[i1].mNy = geometry[snapVertices[i1].name][1];
@@ -697,7 +698,8 @@ function canvasApp() {
 					if (data["status"] == "OK") {
 						results = data["snapshots"];// make it visible
 						console.log("results " + results.length);
-								
+							
+						$('#searchGraph').find(':submit')[0].disabled = true;
 						$('#animation').find(':submit')[0].disabled = false;	
 					}
 				},	
@@ -729,7 +731,9 @@ function canvasApp() {
 			var forge;
 				
 			for (var i1 = 0; i1 < snapVertices.length; i1++) {		
-				connGraph.mV[i1] = new DisplayVertex(snapVertices[i1].name);
+				//connGraph.mV[i1] = new DisplayVertex(snapVertices[i1].name);
+				connGraph.mV[i1] = new DisplayVertex(i1);
+				
 				connGraph.mV[i1].mNx = geometry[snapVertices[i1].name][0];
 				connGraph.mV[i1].mNy = geometry[snapVertices[i1].name][1];
 				connGraph.mV[i1].xPos = xPos[connGraph.mV[i1].mNx];
